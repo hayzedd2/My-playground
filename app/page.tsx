@@ -1,5 +1,4 @@
-import React from "react";
-import Photo from "./components/Photo";
+
 import PhotosCarousel from "./components/PhotosCarousel";
 
 const playgroundPage = () => {

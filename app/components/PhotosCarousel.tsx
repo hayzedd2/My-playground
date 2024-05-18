@@ -92,12 +92,12 @@ interface controllerProps {
 export const CarouselControllers = ({
   currIndex,
   IncreaseCurrIndex,
-  DecreaseCurrIndex
+  DecreaseCurrIndex,
 }: controllerProps) => {
   return (
     <div className="flex items-center justify-center gap-3">
       <div
-        onClick={()=> IncreaseCurrIndex}
+        onClick={() => IncreaseCurrIndex}
         className=" rounded-full w-8 h-8 flex  cursor-pointer items-center justify-center bg-black text-white"
       >
         <FaAngleLeft />
@@ -107,7 +107,10 @@ export const CarouselControllers = ({
           0{currIndex + 1}/07
         </p>
       </div>
-      <div onClick={()=> DecreaseCurrIndex} className=" rounded-full w-8 h-8 flex cursor-pointer items-center justify-center bg-black text-white">
+      <div
+        onClick={() => DecreaseCurrIndex}
+        className=" rounded-full w-8 h-8 flex cursor-pointer items-center justify-center bg-black text-white"
+      >
         <FaAngleRight />
       </div>
     </div>
