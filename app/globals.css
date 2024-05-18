@@ -10,3 +10,10 @@
 .radialbg{
   @apply border min-h-screen w-full flex-col flex items-center justify-center bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-white to-black
 }
+.indicator::-webkit-scrollbar{
+  display: none;
+}
+.indicator{
+  scrollbar-width: none;
+  
+}

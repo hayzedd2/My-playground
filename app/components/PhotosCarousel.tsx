@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import nature from "../image/nature.jpg";
+import nature2 from "../image/nature2.jpg";
 import nature3 from "../image/nature3.jpg";
-const images = [nature3, nature3, nature3, nature3, nature3, nature3, nature3];
+import nature4 from "../image/nature4.jpg";
+const images = [nature4, nature2, nature3, nature3, nature3, nature3, nature3];
 import { motion } from "framer-motion";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { Dispatch, SetStateAction, useState } from "react";
@@ -33,7 +34,7 @@ const PhotosCarousel = () => {
 
 export const Images = ({ imgIndex }: { imgIndex: number }) => {
   return (
-    <div className="flex xl:w-[60vw]  sm:w-[90vw] items-center overflow-hidden mx-auto">
+    <div className="flex xl:w-[60vw]  sm:w-[95vw] items-center overflow-hidden mx-auto">
       {images.map((image, index) => {
         return (
           <motion.div
@@ -48,7 +49,7 @@ export const Images = ({ imgIndex }: { imgIndex: number }) => {
               stiffness: 400,
               damping: 50,
             }}
-            className="aspect-video rounded-[10px] xl:w-[60vw] sm:w-[90vw] shrink-0 bg-neutral-700 object-cover "
+            className="aspect-video rounded-[10px] xl:w-[60vw] sm:w-[95vw] shrink-0 bg-neutral-700 object-cover "
             style={{
               backgroundImage: `url(${image.src})`,
               backgroundSize: "cover",
@@ -67,7 +68,7 @@ interface imageProps {
 }
 export const ImageIndicator = ({ currIndex, setCurrIndex }: imageProps) => {
   return (
-    <div className="flex gap-2 xl:overflow-auto sm:overflow-scroll mb-5 xl:max-w-[60vw] mx-auto items-center justify-center">
+    <div className="flex indicator gap-2 xl:overflow-auto sm:overflow-scroll mb-5 xl:max-w-[60vw] mx-auto items-center justify-center">
       {images.map((image, index) => {
         return (
           <Image
@@ -95,23 +96,11 @@ export const CarouselControllers = ({
   DecreaseCurrIndex,
 }: controllerProps) => {
   return (
-    <div className="flex items-center justify-center gap-3">
-      <div
-        onClick={() => IncreaseCurrIndex}
-        className=" rounded-full w-8 h-8 flex  cursor-pointer items-center justify-center bg-black text-white"
-      >
-        <FaAngleLeft />
-      </div>
+    <div className="flex items-center justify-center gap-3 mt-4">
       <div>
-        <p className="font-bold underline text-white underline-offset-2 text-[0.95rem]">
+        <p className="font-bold underline text-white underline-offset-2 text-[2rem]">
           0{currIndex + 1}/07
         </p>
-      </div>
-      <div
-        onClick={() => DecreaseCurrIndex}
-        className=" rounded-full w-8 h-8 flex cursor-pointer items-center justify-center bg-black text-white"
-      >
-        <FaAngleRight />
       </div>
     </div>
   );
