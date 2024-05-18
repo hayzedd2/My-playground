@@ -4,7 +4,10 @@ import Image from "next/image";
 import nature2 from "../image/nature2.jpg";
 import nature3 from "../image/nature3.jpg";
 import nature4 from "../image/nature4.jpg";
-const images = [nature4, nature2, nature3, nature3, nature3, nature3, nature3];
+import nature1 from "../image/nature1.jpg";
+import nature5 from "../image/nature5.jpg";
+import nature6 from "../image/nature6.jpg";
+const images = [nature4,  nature3, nature2, nature5,  nature6, nature1];
 import { motion } from "framer-motion";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { Dispatch, SetStateAction, useState } from "react";
@@ -49,7 +52,7 @@ export const Images = ({ imgIndex }: { imgIndex: number }) => {
               stiffness: 400,
               damping: 50,
             }}
-            className="aspect-video rounded-[10px] xl:w-[60vw] sm:w-[95vw] shrink-0 bg-neutral-700 object-cover "
+            className="aspect-video sm:rounded-[10px] xl:rounded-[14px] xl:w-[60vw] sm:w-[95vw] shrink-0 bg-neutral-700 object-cover "
             style={{
               backgroundImage: `url(${image.src})`,
               backgroundSize: "cover",
@@ -98,8 +101,8 @@ export const CarouselControllers = ({
   return (
     <div className="flex items-center justify-center gap-3 mt-4">
       <div>
-        <p className="font-bold underline text-white underline-offset-2 text-[2rem]">
-          0{currIndex + 1}/07
+        <p className="font-bold underline text-black underline-offset-2 text-[2rem]">
+          0{currIndex + 1}/06
         </p>
       </div>
     </div>
