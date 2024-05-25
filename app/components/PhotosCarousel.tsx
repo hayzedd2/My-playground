@@ -41,14 +41,14 @@ export const AboutText = () => {
   return (
     <div className="w-full py-4 px-4">
       <h1 className="font-[500] text-[1.8rem] text-white ">Image carousel</h1>
-      {/* <p className="text-white">
+      <p className="text-white">
         Inspired by the carousel component on the
         <span className="underline underline-offset-1">
           <a href="" className="flex items-center gap-1">
             Paystack&apos;s 2023 in review website <BsArrowUpRight />
           </a>
         </span>
-      </p> */}
+      </p>
     </div>
   );
 };
