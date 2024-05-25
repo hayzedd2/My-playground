@@ -64,6 +64,10 @@ const FocusInteraction = () => {
       },
     },
   ];
+  const activeElementOptionClass =
+    "h-[6.7rem] flex items-start justify-between";
+  const inActiveElementOptionClass =
+    "h-[4rem] flex items-center justify-between";
   return (
     <section className="py-10 items-center justify-center flex">
       <div className={`${kumbh.className} flex flex-col gap-3`}>
@@ -75,24 +79,29 @@ const FocusInteraction = () => {
               onClick={() => setCurrActiveElement(index)}
               key={index}
               className={`${
-                activeElementOptions === index ? "h-[6.7rem]" : "h-[3.7rem]"
+                activeElementOptions === index
+                  ? activeElementOptionClass
+                  : inActiveElementOptionClass
               }
-              cursor-pointer  px-[1.4rem]   flex w-[14rem] rounded-[30px] items-center justify-between`}
+              cursor-pointer px-[1.4rem] py-4 w-[14rem] rounded-[30px]`}
             >
               <motion.p className="text-[1.15rem]">{focus.FocusIcon}</motion.p>
               <motion.p
                 animate={{
-                  translateY: activeElement == index ? "-2px" : "",
+                  translateY: activeElement == index ? "-3px" : "",
                 }}
                 transition={{
                   duration: 0.5,
                 }}
-                className="text-[0.8rem] flex flex-col items-center justify-center gap-[0.02rem]  "
+                className="text-[0.8rem] flex flex-col items-center justify-center gap-[0.01rem]  "
               >
                 {focus.FocusText}
                 {activeElement == index ? (
-                  <span className="text-[0.65rem]">On</span>
+                  <span className="text-[0.6rem]">On</span>
                 ) : null}
+                <div className="bg-red-600">
+                    
+                </div>
               </motion.p>
               <SlOptions onClick={() => openElementOptions(index)} />
             </motion.div>
