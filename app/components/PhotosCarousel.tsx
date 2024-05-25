@@ -42,12 +42,8 @@ export const AboutText = () => {
     <div className="w-full py-4 px-4">
       <h1 className="font-[500] text-[1.8rem] text-white ">Image carousel</h1>
       <p className="text-white">
-        Inspired by the carousel component on the
-        <span className="underline underline-offset-1">
-          <a href="" className="flex items-center gap-1">
-            Paystack&apos;s 2023 in review website <BsArrowUpRight />
-          </a>
-        </span>
+        Inspired by a carousel component on the <span><a href="htps://paystack.com/2023"> Paystack&apos;s 2023 in review website</a></span>  
+        
       </p>
     </div>
   );
@@ -55,7 +51,7 @@ export const AboutText = () => {
 
 export const Images = ({ imgIndex }: { imgIndex: number }) => {
   return (
-    <div className="flex xl:w-[50vw]  sm:w-[95vw] items-center overflow-hidden mx-auto">
+    <div className="flex xl:w-[60vw]  sm:w-[95vw] items-center overflow-hidden mx-auto">
       {images.map((image, index) => {
         return (
           <motion.div
@@ -70,7 +66,7 @@ export const Images = ({ imgIndex }: { imgIndex: number }) => {
               stiffness: 400,
               damping: 50,
             }}
-            className="aspect-video sm:rounded-[10px] xl:rounded-[14px] xl:w-[50vw] sm:w-[95vw] shrink-0 bg-neutral-700 object-cover "
+            className="aspect-video sm:rounded-[10px] xl:rounded-[14px] xl:w-[60vw] sm:w-[95vw] shrink-0 bg-neutral-700 object-cover "
             style={{
               backgroundImage: `url(${image.src})`,
               backgroundSize: "cover",

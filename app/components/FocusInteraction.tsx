@@ -19,29 +19,17 @@ const FocusInteraction = () => {
   const openElementOptions = (index: number) => {
     setActiveOptions(index);
   };
-  const variants = {
-    active: {
-      backgroundColor: "white",
-      color: "black",
-      transition: { duration: 0.3, ease: "easeInOut" }, // Customize transition as needed
-    },
-    inactive: {
-      backgroundColor: "#111111fb",
-      color: "#f8f4f4",
-    },
-  };
-
   const focusElements = [
     {
       FocusIcon: <IoMoon />,
       FocusText: "Do Not Disturb",
       FocusAttributes: {
-        time: {
-          time1: "For 1 hour",
-          time2: "Until this evening",
-          time3: "Until i leave this location",
-          timeLocation: "Nearby University of Lagos",
-        },
+        time: [
+          "For 1 hour",
+          "Until this evening",
+          "Until i leave this location",
+        ],
+        timeLocation: "Nearby University of Lagos",
       },
     },
     {
@@ -55,55 +43,75 @@ const FocusInteraction = () => {
       FocusIcon: <HiUser />,
       FocusText: "Personal",
       FocusAttributes: {
-        time: {
-          time1: "For 1 hour",
-          time2: "Until this evening",
-          time3: "Until i leave this location",
-          timeLocation: "Nearby University of Lagos",
-        },
+        time: [
+          "For 1 hour",
+          "Until this evening",
+          "Until i leave this location",
+        ],
+        timeLocation: "Nearby University of Lagos",
       },
     },
   ];
-  const activeElementOptionClass =
-    "h-[6.7rem] flex items-start justify-between";
-  const inActiveElementOptionClass =
-    "h-[4rem] flex items-center justify-between";
+  const variants = {
+    active: {
+      backgroundColor: "white",
+      color: "black",
+      transition: { duration: 0.3, ease: "easeInOut" },
+    },
+    inactive: {
+      backgroundColor: "#111111fb",
+      color: "#f8f4f4",
+    },
+  };
   return (
     <section className="py-10 items-center justify-center flex">
       <div className={`${kumbh.className} flex flex-col gap-3`}>
         {focusElements.map((focus, index) => {
           return (
             <motion.div
+              layout
               variants={variants}
               animate={activeElement === index ? "active" : "inactive"}
-              onClick={() => setCurrActiveElement(index)}
-              key={index}
-              className={`${
-                activeElementOptions === index
-                  ? activeElementOptionClass
-                  : inActiveElementOptionClass
-              }
-              cursor-pointer px-[1.4rem] py-4 w-[14rem] rounded-[30px]`}
+              className={`
+            cursor-pointer py-4 w-[14rem] rounded-[30px]`}
             >
-              <motion.p className="text-[1.15rem]">{focus.FocusIcon}</motion.p>
-              <motion.p
-                animate={{
-                  translateY: activeElement == index ? "-3px" : "",
-                }}
-                transition={{
-                  duration: 0.5,
-                }}
-                className="text-[0.8rem] flex flex-col items-center justify-center gap-[0.01rem]  "
+              <motion.div
+                onClick={() => setCurrActiveElement(index)}
+                key={index}
+                // layout="position"
+                className="flex items-center px-[1.4rem]  justify-between w-full"
               >
-                {focus.FocusText}
-                {activeElement == index ? (
-                  <span className="text-[0.6rem]">On</span>
-                ) : null}
-                <div className="bg-red-600">
-                    
-                </div>
-              </motion.p>
-              <SlOptions onClick={() => openElementOptions(index)} />
+                <motion.p layout="position" className="text-[1.15rem]">
+                  {focus.FocusIcon}
+                </motion.p>
+                <motion.p
+                  animate={{
+                    translateY: activeElement == index ? "-3px" : "",
+                  }}
+                  layout="position"
+                  transition={{
+                    duration: 0.5,
+                  }}
+                  className="text-[0.8rem] flex flex-col items-center justify-center gap-[0.01rem]  "
+                >
+                  {focus.FocusText}
+                  {activeElement == index ? (
+                    <span className="text-[0.6rem]">On</span>
+                  ) : null}
+                </motion.p>
+                <motion.div layout="position">
+                <SlOptions onClick={() => openElementOptions(index)} />
+                </motion.div>
+              </motion.div>
+              {activeElementOptions === index ? (
+                <motion.div className="w-full py-1 flex flex-col items-center justify-center">
+                  <ul className="w-full" >
+                    {focus.FocusAttributes.time?.map((time, index) => {
+                      return <li key={index} className="text-[0.85rem]  px-[1.4rem] py-[0.15rem] border-b border-b-black">{time}</li>;
+                    })}
+                  </ul>
+                </motion.div>
+              ) : null}
             </motion.div>
           );
         })}
