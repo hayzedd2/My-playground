@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond } from "next/font/google";
+import { Newsreader } from "next/font/google";
 import "./globals.css";
 
-const inter = Cormorant_Garamond({ style : "italic" , weight : "500" , subsets : ["latin"]});
+const inter = Newsreader({subsets : ["latin"]});
 
 export const metadata: Metadata = {
   title: "Playground",

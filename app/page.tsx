@@ -1,12 +1,13 @@
 
 import FocusInteraction from "./components/FocusInteraction";
 import PhotosCarousel from "./components/PhotosCarousel";
+import WidgetInteraction from "./components/WidgetInteraction";
 
 const playgroundPage = () => {
   return (
-    <main className="radialbg">
+    <main className="bg-[#fdfdfc] text-black">
       <PhotosCarousel/>
-      <FocusInteraction/>
+      <WidgetInteraction/>
     </main>
   );
 };
