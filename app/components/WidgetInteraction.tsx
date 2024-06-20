@@ -9,7 +9,7 @@ import { IoGiftOutline } from "react-icons/io5";
 const WidgetInteraction = () => {
   const [currIndex, setCurrIndex] = useState(0);
   const [dragging, setDragging] = useState(false);
-  const [showOverflow, setShowOverflow] = useState(true);
+  const [showOverflow, setShowOverflow] = useState(false);
 
   const widgets = [
     {
@@ -66,7 +66,7 @@ const WidgetInteraction = () => {
                   <div>
                     <p className="flex text-[#8295af]  gap-1 text-[0.95rem] font-[600]">
                       <IoGiftOutline className="text-[#ff6057] font-[500]" />
-                      Hayzedd&apos;s birthday
+                      Zedd&apos;s bir..
                     </p>
                   </div>
                 </div>
@@ -143,10 +143,10 @@ const WidgetInteraction = () => {
     }
   };
   const dragY = useMotionValue(0);
-  const dragBuffer = 20;
+  const dragBuffer = 10;
 
   return (
-    <section className="flex-col min-h-screen py-5 max-w-[40rem] flex items-center justify-center mx-auto">
+    <section className="flex-col min-h-screen xl:px-0 sm:px-4 py-5 max-w-[40rem] flex items-center justify-center mx-auto">
       <p className="my-2">
         <input type="checkbox" name="" id="" checked={showOverflow} onClick={()=> setShowOverflow(!showOverflow)}/>
         Show overflow
@@ -163,7 +163,7 @@ const WidgetInteraction = () => {
           }}
           onDragStart={onDragStart}
           onDragEnd={onDragEnd}
-          className={`${showOverflow ? "" : "overflow-hidden"} widgetcontainer rounded-[16px] w-[26rem] h-[11.5rem] cursor-grab indicator  flex flex-col`}
+          className={`${showOverflow ? "" : "overflow-hidden"} widgetcontainer rounded-[16px] sm:w-[22rem] xl:w-[26rem] h-[11.5rem] cursor-grab indicator  flex flex-col`}
         >
           {widgets.map((widget, index) => (
             <motion.div
