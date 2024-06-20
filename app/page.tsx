@@ -1,5 +1,4 @@
 
-import FocusInteraction from "./components/FocusInteraction";
 import PhotosCarousel from "./components/PhotosCarousel";
 import WidgetInteraction from "./components/WidgetInteraction";
 
