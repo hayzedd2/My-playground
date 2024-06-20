@@ -24,7 +24,7 @@
   box-shadow: 0px 6px 19px 0px #6f788326;
 }
 .widget {
-  @apply sm:w-[22rem] xl:w-[26rem] min-h-[11.5rem] p-5 rounded-[16px];
+  @apply sm:w-[22rem] xl:w-[26rem] min-h-[11.5rem] max-h-[11.5rem] p-5 rounded-[16px];
 }
 .widget-2 {
   background: rgb(2, 0, 36);
@@ -35,4 +35,11 @@
     rgba(0, 142, 255, 1) 96%,
     rgba(0, 212, 255, 1) 100%
   );
+}
+
+.widget-4{
+  background-image: url('./image/nature4.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
