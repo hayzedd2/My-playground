@@ -66,7 +66,7 @@ const WidgetInteraction = () => {
                   <div>
                     <p className="flex text-[#8295af]  gap-1 text-[0.95rem] font-[600]">
                       <IoGiftOutline className="text-[#ff6057] font-[500]" />
-                      Hayzedd's birthday
+                      Hayzedd&apos;s birthday
                     </p>
                   </div>
                 </div>
@@ -107,7 +107,7 @@ const WidgetInteraction = () => {
                   <div className="h-auto rounded-[8px] w-[4px] bg-[#1aadf8]"></div>
                   <div className="bg-[#E8F7FE] w-full rounded-[6px]">
                     <div className="flex flex-col ">
-                      <p className="font-[600] text-[#337fa6]">Bola's dinner</p>
+                      <p className="font-[600] text-[#337fa6]">Bola&apos;s dinner</p>
                       <p className="text-[#64b2db] font-[500] text-[0.85rem]">
                         8.00-10.00PM
                       </p>

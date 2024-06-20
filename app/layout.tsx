@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Newsreader } from "next/font/google";
 import "./globals.css";
-
+import { Analytics } from "@vercel/analytics/react";
 const inter = Newsreader({subsets : ["latin"]});
 
 export const metadata: Metadata = {
@@ -17,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
+      <Analytics/>
     </html>
   );
 }
