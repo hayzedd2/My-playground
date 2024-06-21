@@ -134,7 +134,7 @@ export const CarouselControllers = ({
   return (
     <div className="flex items-center justify-center gap-3 mt-4">
       <div>
-        <p className="underline text-black underline-offset-2 text-[1.5rem]">
+        <p className="underline underline-offset-2 text-[1.5rem]">
           0{currIndex + 1}/06
         </p>
       </div>

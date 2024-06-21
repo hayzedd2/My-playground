@@ -223,6 +223,7 @@ const WidgetInteraction = () => {
 
   return (
     <section className="flex-col py-10 xl:px-0 sm:px-4  max-w-[40rem] flex items-center justify-center mx-auto">
+      <AboutText />
       <p className="my-2">
         <input
           type="checkbox"
@@ -298,7 +299,7 @@ const WidgetIndicator = ({
               currIndex == index
                 ? "h-[12px] rounded-[8px]"
                 : "h-[7px] rounded-full"
-            } w-[7px] bg-[#2c2c2c] cursor-pointer`}
+            } w-[7px] bg-[#d1d1cb] cursor-pointer`}
             onClick={() => setCurrIndex(index)}
           ></div>
         ))}
@@ -308,5 +309,15 @@ const WidgetIndicator = ({
   // <div className=""></div>
   //   <div className="w-4 h-4 rounded-full bg-black"></div>
   //   <div className="w-4 h-4 rounded-full bg-black"></div>
+};
+export const AboutText = () => {
+  return (
+    <div className="w-full pb-4 px-4 ">
+      <h1 className="text-[1.2rem]">Widget scroll</h1>
+      <p className="text-[0.85rem]">
+        Tried to recreate the Apple&apos;s widget interaction on iphone.
+      </p>
+    </div>
+  );
 };
 export default WidgetInteraction;
