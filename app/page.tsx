@@ -1,10 +1,12 @@
 
+import Navbar from "./components/Navbar";
 import PhotosCarousel from "./components/PhotosCarousel";
 import WidgetInteraction from "./components/WidgetInteraction";
 
 const playgroundPage = () => {
   return (
-    <main className="bg-[#fdfdfc] text-black">
+    <main className="bg-[#111110] text-[#d1d1cb]">
+      {/* <Navbar/> */}
       <PhotosCarousel/>
       <WidgetInteraction/>
     </main>

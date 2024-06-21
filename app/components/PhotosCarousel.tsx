@@ -8,6 +8,7 @@ import nature1 from "../image/nature1.jpg";
 import nature5 from "../image/nature5.jpg";
 import nature6 from "../image/nature6.jpg";
 const images = [nature4, nature3, nature2, nature5, nature6, nature1];
+import { HiOutlineCursorClick } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { Dispatch, SetStateAction, useState } from "react";
 
@@ -20,8 +21,9 @@ const PhotosCarousel = () => {
     setCurrentIndex((prev) => prev - 1);
   };
   return (
-    <div className="relative py-10  max-w-[40rem] mx-auto">
+    <div className="relative py-10 pt-20 max-w-[40rem] mx-auto">
       <div className="flex flex-col items-center  justify-center">
+        <AboutMe/>
         <AboutText />
         <ImageIndicator currIndex={currIndex} setCurrIndex={setCurrentIndex} />
         <Images imgIndex={currIndex} />
@@ -34,12 +36,33 @@ const PhotosCarousel = () => {
     </div>
   );
 };
+export const AboutMe = () => {
+  return (
+    <>
+      <div className="px-4 flex flex-col gap-1">
+        <p>Hi there, i am <span className="underline  underline-offset-2">Alhameen</span>, a frontend engineer based in Lagos.</p>
+        <p>This is my playground, i just like to experiment creating some interactions i see online (currently learning framer-motion)</p>
+        <a href="alhameen.vercel.app" target="_blank" className="w-full  flex items-end justify-end underline underline-offset-2">See my portfolio</a>
+      </div>
+     
+    </>
+  );
+};
 export const AboutText = () => {
   return (
-    <div className="w-full pb-4 px-4 flex flex-col items-center justify-center">
-      <h1 className="font-[500] text-[1.8rem] text-black ">Image carousel</h1>
-      <p className="text-black">
-        Inspired by a carousel component on the <span><a href="htps://paystack.com/2023" className="underline underline-offset-2"> Paystack&apos;s 2023 in review website</a></span>  
+    <div className="w-full pb-4 px-4 ">
+      <h1 className="text-[1.2rem]">Image carousel</h1>
+      <p className="text-[0.85rem]">
+        Inspired by a carousel component on the{" "}
+        <span>
+          <a
+            href="htps://paystack.com/2023"
+            className="underline underline-offset-2"
+          >
+            {" "}
+            Paystack&apos;s 2023 in review website
+          </a>
+        </span>
       </p>
     </div>
   );

@@ -222,7 +222,7 @@ const WidgetInteraction = () => {
   const dragBuffer = 10;
 
   return (
-    <section className="flex-col min-h-screen xl:px-0 sm:px-4 py-5 max-w-[40rem] flex items-center justify-center mx-auto">
+    <section className="flex-col py-10 xl:px-0 sm:px-4  max-w-[40rem] flex items-center justify-center mx-auto">
       <p className="my-2">
         <input
           type="checkbox"
