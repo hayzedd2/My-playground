@@ -21,9 +21,8 @@ const PhotosCarousel = () => {
     setCurrentIndex((prev) => prev - 1);
   };
   return (
-    <div className="relative py-10 pt-20 max-w-[40rem] mx-auto">
+    <div className="relative max-w-[40rem] pt-10 mx-auto">
       <div className="flex flex-col items-center  justify-center">
-        <AboutMe/>
         <AboutText />
         <ImageIndicator currIndex={currIndex} setCurrIndex={setCurrentIndex} />
         <Images imgIndex={currIndex} />
@@ -36,18 +35,7 @@ const PhotosCarousel = () => {
     </div>
   );
 };
-export const AboutMe = () => {
-  return (
-    <>
-      <div className="px-4 flex flex-col gap-1">
-        <p>Hi there, i am <span className="underline  underline-offset-2">Alhameen</span>, a frontend engineer based in Lagos.</p>
-        <p>This is my playground, i just like to experiment creating some interactions i see online (currently learning framer-motion)</p>
-        <a href="alhameen.vercel.app" target="_blank" className="w-full  flex items-end justify-end underline underline-offset-2">See my portfolio</a>
-      </div>
-     
-    </>
-  );
-};
+
 export const AboutText = () => {
   return (
     <div className="w-full pb-4 px-4 ">

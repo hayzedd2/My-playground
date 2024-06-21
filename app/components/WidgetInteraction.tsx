@@ -146,7 +146,7 @@ const WidgetInteraction = () => {
       key: "widget-2",
       content: (
         <div className=" widget widget-5 p-3 flex bg-[#282d31]">
-          <div className="basis-[30%] flex flex-col justify-between">
+          <div className="basis-[20%] flex flex-col justify-between">
             <div className="w-10 h-10 rounded-full flex items-center justify-center font-[500] bg-[#7E57C2] text-white">
               <p>A</p>
             </div>
@@ -154,24 +154,24 @@ const WidgetInteraction = () => {
               <MdOutlineModeEdit className="text-[1.2rem] text-[#e0938f]" />
             </div>
           </div>
-          <div className="basis-[70%] flex flex-col gap-1">
-            <div className="flex bg-[#414242] p-1.5 rounded-[6px]">
-              <div className="flex flex-col justify-center gap-0 basis-[80%]">
+          <div className="basis-[80%] flex flex-col gap-1">
+            <div className="flex justify-between bg-[#414242] p-1.5 rounded-[6px]">
+              <div className="flex flex-col justify-center gap-0 basis-[75%]">
                 <h6 className=" text-[#89898b] text-[0.75rem] font-[600]">
                   Cowrywise
                 </h6>
                 <p className="text-[0.75rem] text-white">
-                  Your withdrawal has been successful
+                  Your withdrawal is being processed
                 </p>
               </div>
               <div>
-                <p className="text-[0.75rem] font-[600] h-full flex items-center justify-center text-[#89898b] basis-[20%] ">
+                <p className="text-[0.75rem] font-[600] h-full flex items-center justify-center text-[#89898b] basis-[25%] ">
                   9:40 PM
                 </p>
               </div>
             </div>
-            <div className="flex bg-[#414242] p-1.5 rounded-[6px]">
-              <div className="flex flex-col justify-center gap-0 basis-[80%]">
+            <div className="flex bg-[#414242] justify-between p-1.5 rounded-[6px]">
+              <div className="flex flex-col justify-center gap-0 basis-[75%]">
                 <h6 className=" text-[#89898b] text-[0.75rem] font-[600]">
                   Vercel
                 </h6>
@@ -180,13 +180,13 @@ const WidgetInteraction = () => {
                 </p>
               </div>
               <div>
-                <p className="text-[0.75rem] font-[600] h-full flex items-center justify-center text-[#89898b] basis-[20%] ">
+                <p className="text-[0.75rem] font-[600] h-full flex items-center justify-center text-[#89898b] basis-[25%] ">
                   8:16 PM
                 </p>
               </div>
             </div>
-            <div className="flex bg-[#414242] p-1 rounded-[6px]">
-              <div className="flex flex-col justify-center gap-0 basis-[80%]">
+            <div className="flex bg-[#414242] justify-between p-1 rounded-[6px]">
+              <div className="flex flex-col justify-center gap-0 basis-[75%]">
                 <h6 className=" text-[#89898b] text-[0.75rem] font-[600]">
                   Glassdoor jobs
                 </h6>
@@ -195,7 +195,7 @@ const WidgetInteraction = () => {
                 </p>
               </div>
               <div>
-                <p className="text-[0.75rem] font-[600] h-full flex items-center justify-center text-[#89898b] basis-[20%] ">
+                <p className="text-[0.75rem] font-[600] h-full flex items-center justify-center text-[#89898b] basis-[25%] ">
                   5:20 PM
                 </p>
               </div>
@@ -222,9 +222,9 @@ const WidgetInteraction = () => {
   const dragBuffer = 10;
 
   return (
-    <section className="flex-col py-10 xl:px-0 sm:px-4  max-w-[40rem] flex items-center justify-center mx-auto">
+    <section className="flex-col py-10 max-w-[40rem] flex items-center justify-center mx-auto">
       <AboutText />
-      <p className="my-2">
+      {/* <p className="my-2">
         <input
           type="checkbox"
           name=""
@@ -233,7 +233,7 @@ const WidgetInteraction = () => {
           onClick={() => setShowOverflow(!showOverflow)}
         />
         Show overflow
-      </p>
+      </p> */}
       <div className="flex gap-2">
         <motion.div
           drag="y"
@@ -248,7 +248,7 @@ const WidgetInteraction = () => {
           onDragEnd={onDragEnd}
           className={`${
             showOverflow ? "" : "overflow-hidden"
-          } widgetcontainer rounded-[16px] sm:w-[22rem] xl:w-[26rem] h-[11.5rem] cursor-grab indicator  flex flex-col`}
+          } widgetcontainer  rounded-[16px] sm:w-[22rem] xl:w-[26rem] h-[11.5rem] cursor-grab indicator  flex flex-col`}
         >
           {widgets.map((widget, index) => (
             <motion.div
@@ -305,14 +305,10 @@ const WidgetIndicator = ({
         ))}
     </div>
   );
-
-  // <div className=""></div>
-  //   <div className="w-4 h-4 rounded-full bg-black"></div>
-  //   <div className="w-4 h-4 rounded-full bg-black"></div>
 };
 export const AboutText = () => {
   return (
-    <div className="w-full pb-4 px-4 ">
+    <div className="w-full px-4">
       <h1 className="text-[1.2rem]">Widget scroll</h1>
       <p className="text-[0.85rem]">
         Tried to recreate the Apple&apos;s widget interaction on iphone.

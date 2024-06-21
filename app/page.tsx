@@ -1,15 +1,20 @@
 
+import { AboutMe } from "./components/AboutMe";
 import Navbar from "./components/Navbar";
 import PhotosCarousel from "./components/PhotosCarousel";
 import WidgetInteraction from "./components/WidgetInteraction";
 
 const playgroundPage = () => {
   return (
-    <main className="bg-[#111110] text-[#d1d1cb]">
+    <section className="bg-[rgb(17,17,16)]">
+    <main className="text-[#d1d1cb] max-w-[40rem] mx-auto pb-20">
+      <AboutMe/>
       {/* <Navbar/> */}
-      <PhotosCarousel/>
       <WidgetInteraction/>
+      <PhotosCarousel/>
+     
     </main>
+    </section>
   );
 };
 
