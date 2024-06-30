@@ -15,7 +15,7 @@ const playgroundPage = () => {
       <WidgetInteraction/>
       <PhotosCarousel/>
       <Experiment/>
-      <Expandable/>
+      {/* <Expandable/> */}
      
     </main>
     </section>
