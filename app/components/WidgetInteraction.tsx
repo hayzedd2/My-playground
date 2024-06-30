@@ -234,7 +234,7 @@ const WidgetInteraction = () => {
         />
         Show overflow
       </p> */}
-      <div className="flex gap-2">
+      <div className="flex gap-2 mt-3">
         <motion.div
           drag="y"
           dragConstraints={{

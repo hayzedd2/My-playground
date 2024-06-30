@@ -26,7 +26,37 @@
 .widget {
   @apply sm:w-[22rem] xl:w-[26rem] min-h-[11.5rem] max-h-[11.5rem] p-5 rounded-[16px];
 }
-.widget-2 {
+.box-1 {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    184deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(254, 254, 255, 1) 0%,
+    rgba(0, 142, 255, 1) 96%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.box-2 {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    184deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgb(205, 42, 21) 0%,
+    rgb(214, 83, 7) 96%,
+    rgb(224, 73, 57) 100%
+  );
+}
+.box-3{
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    184deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgb(8, 228, 23) 0%,
+    rgb(33, 163, 81) 96%,
+    rgb(56, 158, 43) 100%
+  );
+}
+.widget-2{
   background: rgb(2, 0, 36);
   background: linear-gradient(
     184deg,

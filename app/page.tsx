@@ -1,5 +1,7 @@
 
 import { AboutMe } from "./components/AboutMe";
+import { Expandable } from "./components/Expandable";
+import Experiment from "./components/Experiment";
 import Navbar from "./components/Navbar";
 import PhotosCarousel from "./components/PhotosCarousel";
 import WidgetInteraction from "./components/WidgetInteraction";
@@ -12,6 +14,8 @@ const playgroundPage = () => {
       {/* <Navbar/> */}
       <WidgetInteraction/>
       <PhotosCarousel/>
+      <Experiment/>
+      <Expandable/>
      
     </main>
     </section>
